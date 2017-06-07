@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.7);
+  font: 100%/1.5 "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease; }
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border-radius: 10px;
+  transition: all 1s ease; }
+
+#albumInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+}
+#albumInfo > * {
+    margin: 1.5rem 0; 
+}

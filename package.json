@@ -1,0 +1,20 @@
+{
+  "name": "album-scrobbler",
+  "version": "1.0.0",
+  "description": "Streams tracks and colors of album cover",
+  "main": "main.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Jesper Orb",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "get-image-colors": "^1.8.1",
+    "lastfm": "^0.9.2",
+    "pug": "^2.0.0-beta11",
+    "socket.io": "^1.7.3"
+  }
+}

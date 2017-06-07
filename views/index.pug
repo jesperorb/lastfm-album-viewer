@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Play it again, Sam.
+    link(href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet")
+    link(href="dist/main.css" rel="stylesheet")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="icon" href="dist/favicon.png")
+    style.
+      body{
+        background: #{currentColorArray[0]};
+      }
+      img{
+        box-shadow: 0 0 100px #{currentColorArray[1]}
+      }
+      #albumInfo h1,h2{
+        color: #{currentColorArray[3]}
+      }
+  body
+    div(id="albumInfo")
+      h1(id="songTitle") #{currentTrack.name}
+      h2(id="albumTitle") #{currentTrack.artist['#text']} - #{currentTrack.album['#text']}
+      img(id="albumCover"
+          crossOrigin="anonymous" 
+          src=currentTrack.image[3]['#text']
+          alt=currentTrack.name['#text']
+      )
+      if currentTrack['@attr']
+        h1(id="nowPlaying") Now playing
+      else
+        h1(id="nowPlaying") Not playing
+    script(src="/socket.io/socket.io.js")
+    script(src="dist/main.js")
