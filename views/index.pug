@@ -9,24 +9,24 @@ html(lang="en")
     link(rel="icon" href="dist/favicon.png")
     style.
       body{
-        background: #{currentColorArray[0]};
+        background: #{colorsOfLastPlayedTrack[0]};
       }
       img{
-        box-shadow: 0 0 100px #{currentColorArray[1]}
+        box-shadow: 0 0 100px #{colorsOfLastPlayedTrack[1]}
       }
       #albumInfo h1,h2{
-        color: #{currentColorArray[3]}
+        color: #{colorsOfLastPlayedTrack[3]}
       }
   body
     div(id="albumInfo")
-      h1(id="songTitle") #{currentTrack.name}
-      h2(id="albumTitle") #{currentTrack.artist['#text']} - #{currentTrack.album['#text']}
+      h1(id="songTitle") #{lastPlayedTrack.name}
+      h2(id="albumTitle") #{lastPlayedTrack.artist['#text']} - #{lastPlayedTrack.album['#text']}
       img(id="albumCover"
           crossOrigin="anonymous" 
-          src=currentTrack.image[3]['#text']
-          alt=currentTrack.name['#text']
+          src=lastPlayedTrack.image[3]['#text']
+          alt=lastPlayedTrack.name['#text']
       )
-      if currentTrack['@attr']
+      if lastPlayedTrack['@attr']
         h1(id="nowPlaying") Now playing
       else
         h1(id="nowPlaying") Not playing

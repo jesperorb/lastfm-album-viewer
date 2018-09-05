@@ -1,7 +1,7 @@
 {
-  "name": "album-scrobbler",
+  "name": "lastfm-album-scrobbler",
   "version": "1.0.0",
-  "description": "Streams tracks and colors of album cover",
+  "description": "Streams tracks and colors of album cover from lastfm",
   "main": "main.js",
   "scripts": {
     "start": "node app.js",
